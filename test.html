@@ -1,0 +1,92 @@
+<div class="left side-menu">
+    <div class="slimScrollDiv" style="position: relative; overflow: inherit; width: auto; height: 610px;"><div class="sidebar-inner slimscrollleft" style="overflow: inherit; width: auto; height: 610px;">
+        <!-- Search Supplier form -->
+        <div role="search" class="navbar-form">
+                            <div class="form-group search-box-layout" data-intro="Search for agencies, companies and suppliers using keyword." data-position="top">
+                <!-- <input data-toggle="tooltip" data-placement="right" type="text" placeholder="Quick Search" class="form-control" style="padding-left: 40px" onkeyup="searchSupplier()" id="search_term"> -->
+                <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input data-toggle="tooltip" data-placement="right" required="" type="text" placeholder="Quick Search" class="form-control ui-autocomplete-input" style="padding-left: 40px" id="search_term" autocomplete="off">
+                <button type="submit" onclick="searchSupplier('click')" class="btn search-button"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="search-box-res">
+            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0"></ul></div>
+
+                        </div>
+        <script>
+            $('#search_term').keypress(function(event){
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13') {
+                    searchSupplier('click')
+                }
+            });
+        </script>
+        <!-- End Search Supplier form -->
+        <div class="clearfix"></div>
+        <!--- Profile -->
+        <div class="profile-info">
+            <div class="col-xs-4">
+                                            <a href="#" class="rounded-image profile-image profile_1" onclick="myprofile()"><img src="/templates/Datalou-v3/images/users/userdefault.png"></a>
+                                    </div>
+            <div class="col-xs-8">
+                <div class="profile-text">Welcome <b>Aaron</b></div>
+                <div class="profile-buttons">
+                    <a href="mailto:?subject=Datalou"><i class="fas fa-envelope"></i></a>
+                    <!--<a href="#connect" class="open-right"><i class="fa fa-comments"></i></a>-->
+                    <a data-toggle="modal" href="#logout-modal" title="Sign Out"><i class="fa fa-power-off text-red-1"></i></a>
+                </div>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div class="clearfix"></div>
+        <hr class="divider">
+        <div class="clearfix"></div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/a-demo/dashboard">
+                        <i class="icon-home-3"></i><span>Dashboard</span>
+                    </a>
+                </li>
+                                        <li class="has_sub" data-intro="Manage your agencies, companies and suppliers." data-position="right">
+                        <a href="javascript:void(0);" class="subdrop">
+                            <i class="icon-pencil-3"></i><span>User Actions</span> <span class="pull-right"><i class="fa fa-angle-up"></i></span>
+                        </a>
+                                                        <ul style="">
+                                <li class="has_sub"><a href="javascript:void(0);">Agency <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/agency">Agency Management</a></li><li><a href="/a-demo/agencyprofile">Agency Profile</a></li><li><a href="/a-demo/agencyalias">Agency Alias</a></li></ul></li><li class="has_sub"><a href="javascript:void(0);">Company <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/customer">Company Management</a></li><li><a href="/a-demo/customerprofile">Company Profile</a></li><li><a href="/a-demo/customeralias">Company Alias</a></li></ul></li><li class="has_sub"><a href="javascript:void(0);">Bid Opportunities <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/bidscreate">Create</a></li><li><a href="/a-demo/bids">Manage</a></li><li class="has_sub"><a href="javascript:void(0);">Report <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/BidOpportunitiesByClassReport">Bid Opportunities By Classification Report</a></li><li><a href="/a-demo/BidOpportunitiesBySupplierReport">Bid Opportunities By Supplier Report</a></li><li><a href="/a-demo/BidOpportunitiesSummaryReport">Bid Opportunities Summary Report</a></li></ul></li><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Scheduled Emails</a></li></ul></li><li class="has_sub"><a href="javascript:void(0);">Supplier <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/vendor">Management</a></li><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Alias</a></li><li data-intro="Search for suppliers with specific filters." data-position="right:35"><a href="/a-demo/vendorsearch">Advanced Search</a></li><li><a href="/a-demo/vendorrating">Rating</a></li><li><a href="/a-demo/influencermgmt">Influencer Management</a></li></ul></li><li class="has_sub"><a href="javascript:void(0);">Site <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Management</a></li></ul></li><li class="has_sub"><a href="javascript:void(0);">Supplier Advocacy <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Management</a></li><li><a href="/a-demo/supplieradvocacyreport">Report</a></li></ul></li><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Coffeehouse</a></li>								</ul>
+                                                </li>
+                    
+                    <li class="has_sub" data-intro="Upload spend data." data-position="right">
+                        <a href="javascript:void(0);">
+                            <i class="fas fa-database"></i><span>Data Management</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                        </a>
+                                                        <ul>
+                                <li class="has_sub"><a href="javascript:void(0);">Upload data <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/fileupload">Template</a></li><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Mapping</a></li></ul></li><li><a href="/a-demo/exceptionscreen">View and Process Exceptions</a></li>								</ul>
+                                                </li>
+
+                    <li class="has_sub" data-intro="Run reports, such as Tier 2 Direct Spend Report." data-position="right">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-table"></i><span>Reporting</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                        </a>
+                                                        <ul>
+                                <li><a href="/a-demo/tier2directspendreport">Tier 2 Direct Spend</a></li><li><a href="/a-demo/agencyindirectspend_m">Agency Indirect Spend</a></li><li><a href="/a-demo/clientsummaryreport">Client Executive Summary</a></li><li><a href="/a-demo/agencyexpenditure_m">Agency Expenditure</a></li><li><a href="/a-demo/agencyexecutivesummary_m">Agency Executive Summary</a></li><li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Media Diversity Planning Report</a></li><li><a href="/a-demo/departmentexpenditure_m">Type Expenditure</a></li><li><a href="/a-demo/ReconciliationReport">Ordered vs Paid Reconciliation Report</a></li><li><a href="/a-demo/supplierexpenditure">Supplier Expenditure</a></li><li><a href="/a-demo/MediaExpendituresSummaryReport">Media Expenditures Summary Report</a></li><li><a href="/a-demo/supplierdiversitysummaryreport">Supplier Diversity Summary</a></li><li><a href="/a-demo/compliancereport">Compliance Diversity</a></li><li><a href="/a-demo/businessrulereport">Business Rules Report</a></li><li><a href="/a-demo/reporthistoryview">View Report History</a></li><li class="has_sub"><a href="javascript:void(0);">Beta <span class="pull-right"><i class="fa fa-angle-down"></i></span></a><ul><li><a href="/a-demo/businessrulereport">Business Rules Report</a></li></ul></li>								</ul>
+                                                </li>
+
+                    <li class="has_sub" data-intro="Manage your supplier advocacy cases or run a tracking report." data-position="right:30">
+                        <a href="javascript:void(0);">
+                            <i class="fa fa-user-cog"></i><span>Advocacy Management</span> <span class="pull-right"><i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul>
+                            <li><a title="Not authorised contact your administrator" id="Save" class="action-disable" href="javascript:void(null);">Management</a></li><li><a href="/a-demo/supplieradvocacyreport">Report</a></li>							</ul>
+                    </li>
+                    <li data-intro="Search for suppliers with specific filters." data-position="right:35"><a href="/a-demo/vendorsearch"><i class="far fa-list-alt"></i><span>Advanced Supplier Search</span></a></li>
+                                </ul>
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+        <!-- Footer End -->
+    </div><div class="slimScrollBar" style="background: rgb(122, 134, 143); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; left: 1px; height: 610px; visibility: hidden;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; left: 1px;"></div></div>
+</div>
